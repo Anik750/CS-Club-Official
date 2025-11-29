@@ -1,62 +1,120 @@
 import Layout from "@/components/Layout";
 import { User } from "lucide-react";
-
+import Alicia from "../components/images/members/Alicia.png"; 
+import Anik from "../components/images/members/Anik.png"; 
+import Cheta from "../components/images/members/Cheta.png"; 
+import Daniel from "../components/images/members/Daniel.png"; 
+import Joseph from "../components/images/members/Joseph.png"; 
+import Matthew from "../components/images/members/Matthew.png"; 
+import Rania from "../components/images/members/Rania.png"; 
+import Rishon from "../components/images/members/Rishon.png"; 
+import Sanjay from "../components/images/members/Sanjay.png"; 
+import Sean from "../components/images/members/Sean.png"; 
+import Srinjoy from "../components/images/members/Srinjoy.png"; 
+import Vedant from "../components/images/members/Vedant.png"; 
+import linux from "../components/images/assets/linux.jpg"
 export default function About() {
   const teamRoles = [
     {
-      id: "president",
-      role: "President",
-      name: "Edit Member Name",
-      description: "Placeholder - Edit to add team member bio",
-      image: null,
+      id: "Co-Pres",
+      role: "Co-President",
+      name: "Daniel Son",
+      description: "Fun Fact: \"I know the same number of programming languages as real languages.\"",
+      image: Daniel,
     },
     {
-      id: "vice-president",
-      role: "Vice President",
-      name: "Edit Member Name",
-      description: "Placeholder - Edit to add team member bio",
-      image: null,
+      id: "Co-Pres",
+      role: "Co-President",
+      name: "Sanjay Ganapathy",
+      description: "Fun Fact: \"I am a Machine Learning researcher and love going on walks around my neighborhood!\"",
+      image: Sanjay,
     },
     {
-      id: "treasurer",
-      role: "Treasurer",
-      name: "Edit Member Name",
-      description: "Placeholder - Edit to add team member bio",
-      image: null,
+      id: "VP",
+      role: "Vice-President Internal Affairs",
+      name: "Anik Koirala",
+      description: "Fun Fact: \"I love playing chess in my free time.\"",
+      image: Anik,
     },
     {
-      id: "secretary",
+      id: "VP",
+      role: "Vice-President External Affairs",
+      name: "Srinjoy Maji",
+      description: "Fun Fact: \"I have lived in Singapore for 2 years!\"",
+      image: Srinjoy,
+    },
+    {
+      id: "Sec",
       role: "Secretary",
-      name: "Edit Member Name",
-      description: "Placeholder - Edit to add team member bio",
-      image: null,
+      name: "Jeongseop Yoon",
+      description: "Fun Fact: \"I play the guitar!\"",
+      image: Joseph,
     },
     {
-      id: "head-events",
-      role: "Head of Events",
-      name: "Edit Member Name",
-      description: "Placeholder - Edit to add team member bio",
-      image: null,
+      id: "DOA",
+      role: "Director of Activities",
+      name: "Vedant Narayansa",
+      description: "Fun Fact: \"I love Fortnite.\"",
+      image: Vedant,
     },
     {
-      id: "head-education",
-      role: "Head of Education",
-      name: "Edit Member Name",
-      description: "Placeholder - Edit to add team member bio",
-      image: null,
+      id: "DOCP",
+      role: "Director of Competitive Programming",
+      name: "Sean Fang",
+      description: "Fun Fact: \"I like playing golf.\"",
+      image: Sean,
+    },
+    {
+      id: "DOO",
+      role: "Director of Outreach",
+      name: "Rania Ahsan",
+      description: "Fun Fact: \"I have a twin brother!\"",
+      image: Rania,
+    },
+    {
+      id: "DOP",
+      role: "Director of Publicity",
+      name: "Alicia Chen",
+      description: "Fun Fact: \"I have a black cat named Hanzel.\"",
+      image: Alicia,
+    },
+    {
+      id: "DOP-2",
+      role: "Director of Publicity",
+      name: "Matthew Meng",
+      description: "Fun Fact: \"I am double-jointed in both of my thumbs, and I can bend them awkwardly this way.\"",
+      image: Matthew,
+    },
+    {
+      id: "Treasurer",
+      role: "Treasurer",
+      name: "Rishon Joshua",
+      description: "Fun Fact: \"I love Linux.\"",
+      image: Rishon,
+    },
+
+    {
+      id: "MS-Rep",
+      role: "Middle School Representative",
+      name: "Chetachukwu Nzeogu",
+      description: "Fun Fact: \"Music is cool.\"",
+      image: Cheta,
     },
   ];
 
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark-bg via-dark-bg to-mystical/20 py-20">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-mystical/20 rounded-full blur-3xl animate-float"></div>
-          <div
-            className="absolute bottom-20 right-10 w-96 h-96 bg-gold/10 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "2s" }}
-          ></div>
+      <div className="absolute inset-0 z-0">
+          <img
+            src={linux}
+            alt="Diverse team collaboration"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/80 to-transparent"></div>
+          {/* Mystical overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-mystical/20 via-transparent to-gold/5"></div>
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -65,14 +123,15 @@ export default function About() {
               About CS Club
             </span>
           </h1>
-          <p className="text-xl text-gold/70 max-w-2xl mx-auto">
-            A community dedicated to fostering a passion for computer science
-            and building the leaders of tomorrow.
-          </p>
         </div>
       </section>
-
-      {/* About Content */}
+      <div className="relative h-16 bg-gradient-to-r from-transparent via-gold to-transparent opacity-40 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-dark-bg via-gold/20 to-dark-bg"></div>
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+        </div>
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
+      </div>
       <section className="py-16 bg-dark-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
@@ -81,10 +140,9 @@ export default function About() {
               <p className="text-gold/70 text-lg leading-relaxed">
                 CS Club is dedicated to inspiring and empowering students to
                 explore the vast world of computer science. We believe in
-                creating an inclusive community where students can learn,
-                collaborate, and grow together. Whether you're just starting
-                your coding journey or already a seasoned developer, there's a
-                place for you here.
+                creating an inclusive community where students can learn and grow together. 
+                Whether you're just starting your coding journey or already a seasoned developer, 
+                there's a place for you here.
               </p>
             </div>
 
@@ -94,24 +152,24 @@ export default function About() {
                 <li className="flex gap-3">
                   <span className="text-gold font-bold">→</span>
                   <span>
-                    Host weekly meetings and workshops on various programming
+                    Host monthly general meetings and workshops on various programming
                     topics
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-gold font-bold">→</span>
-                  <span>Organize hackathons and coding competitions</span>
+                  <span>Organize hackathons and coding competitions (<strong>USACO & CodeJam</strong>, to name a few)</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-gold font-bold">→</span>
                   <span>
-                    Provide mentorship and guidance for all skill levels
+                    Provide mentorship and guidance for all skill levels (<strong>CodeSquad</strong>)
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-gold font-bold">→</span>
                   <span>
-                    Create a supportive community for aspiring technologists
+                    Create a supportive community for aspiring computer programmers
                   </span>
                 </li>
                 <li className="flex gap-3">
@@ -125,8 +183,15 @@ export default function About() {
           </div>
         </div>
       </section>
+      
+      <div className="relative h-16 bg-gradient-to-r from-transparent via-gold to-transparent opacity-40 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-dark-bg via-gold/20 to-dark-bg"></div>
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+        </div>
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
+      </div>
 
-      {/* Team Section */}
       <section className="py-20 bg-dark-surface/50 border-y border-gold/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -160,7 +225,6 @@ export default function About() {
                   )}
                 </div>
 
-                {/* Content */}
                 <div className="p-6">
                   <div className="inline-block px-3 py-1 bg-gold/10 rounded-full mb-3">
                     <span className="text-sm font-semibold text-gold">
@@ -175,50 +239,15 @@ export default function About() {
                   </p>
 
                   {/* Edit Hint */}
-                  <div className="mt-4 pt-4 border-t border-gold/10">
+                  {/* <div className="mt-4 pt-4 border-t border-gold/10">
                     <p className="text-xs text-gold/40">
                       Edit this page to add member details like name, bio, and
                       upload a photo
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Placeholder for values or culture section */}
-      <section className="py-16 bg-dark-bg">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-dark-surface border border-gold/20 rounded-xl p-8">
-            <h2 className="text-3xl font-bold text-gold mb-4">Our Values</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-gold mb-2">
-                  Excellence
-                </h3>
-                <p className="text-gold/60">
-                  We strive for excellence in everything we do
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gold mb-2">
-                  Collaboration
-                </h3>
-                <p className="text-gold/60">
-                  We believe in the power of teamwork and community
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gold mb-2">
-                  Innovation
-                </h3>
-                <p className="text-gold/60">
-                  We encourage creative thinking and exploration
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
