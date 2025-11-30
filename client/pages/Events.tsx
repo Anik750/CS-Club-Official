@@ -63,7 +63,6 @@ export default function Events() {
                 key={event.id}
                 className="bg-dark-bg border border-gold/20 rounded-xl overflow-hidden hover:border-gold/50 hover:shadow-lg hover:shadow-gold/20 transition-all duration-300 group"
               >
-                {/* Image Placeholder */}
                 <div className="w-full h-64 bg-gradient-to-br from-dark-surface to-mystical/20 flex items-center justify-center border-b border-gold/20 group-hover:from-dark-surface group-hover:to-mystical/30 transition-all">
                   {event.image ? (
                     <img
@@ -79,28 +78,21 @@ export default function Events() {
                   )}
                 </div>
 
-                {/* Content */}
                 <div className="p-6">
                   <div className="inline-block px-3 py-1 bg-gold/10 rounded-full mb-3">
                     <span className="text-sm font-semibold text-gold">
                       {event.name}
                     </span>
                   </div>
-                  {/* <h3 className="text-2xl font-bold text-gold mb-2">
-                    {event.name}
-                  </h3> */}
                   <p className="text-gold/60 text-sm leading-relaxed">
                     {event.description}
                   </p>
 
-                  {/* Edit Hint */}
                 </div>
               </div>
             ))}
           </div>
         </div>
-      {/* </section> */}
-        {/* </div> */}
       </section>
     </Layout>
   );

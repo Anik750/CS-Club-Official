@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { ArrowRight, BookOpen, Code, Globe, Video, Users, GitBranch } from "lucide-react";
+import { BookOpen, Code, Globe, Video, Users, GitBranch } from "lucide-react";
 import com from "../components/images/assets/com.jpg"
 export default function Resources() {
   const resourceCategories = [

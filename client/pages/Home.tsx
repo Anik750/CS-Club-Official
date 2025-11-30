@@ -5,39 +5,25 @@ import Layout from "@/components/Layout";
 export default function Home() {
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark-bg via-dark-bg to-mystical/20">
-        {/* Mystical background elements */}
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.pexels.com/photos/5473951/pexels-photo-5473951.jpeg"
             alt="Digital code and technology"
             className="w-full h-full object-cover"
           />
-          {/* Dark Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/80 to-transparent"></div>
-          {/* Additional mystical overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-mystical/20 via-transparent to-gold/5"></div>
         </div>
 
-        {/* Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
-             {/*<div className="inline-block">
-              <div className="px-4 py-2 rounded-full border border-gold/30 bg-gold/10 backdrop-blur-sm">
-                {/* <span className="text-sm font-semibold text-gold flex items-center gap-2">
-                  <Sparkles size={30} />
-                  Welcome!
-                </span> 
-              </div> 
-            </div> */}
 
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent">
                 CS Club
               </span>
               <br />
-              {/* <span className="text-gold/60"></span> */}
             </h1>
 
             <p className="text-lg sm:text-xl text-gold/70 max-w-2xl mx-auto leading-relaxed">
@@ -63,15 +49,34 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="relative h-16 bg-gradient-to-r from-transparent via-gold to-transparent opacity-40 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-dark-bg via-gold/20 to-dark-bg"></div>
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+      <div className="relative h-20 bg-gradient-to-r from-dark-bg via-gold/10 to-dark-bg overflow-hidden flex items-center justify-center">
+        <div className="absolute inset-0">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 80" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="transparent" />
+                <stop offset="50%" stopColor="rgba(212, 175, 55, 0.3)" />
+                <stop offset="100%" stopColor="transparent" />
+              </linearGradient>
+            </defs>
+            <path d="M0,40 Q250,10 500,40 T1000,40" stroke="url(#waveGrad)" strokeWidth="2" fill="none" />
+            <path d="M0,50 Q250,20 500,50 T1000,50" stroke="rgba(212, 175, 55, 0.2)" strokeWidth="1" fill="none" />
+          </svg>
+          <div className="absolute inset-0 flex items-center justify-around px-8">
+            {[0, 25, 50, 75, 100].map((pos) => (
+              <div
+                key={pos}
+                className="w-1 h-1 bg-gold rounded-full opacity-60"
+                style={{
+                  animation: `pulse 2s ease-in-out infinite`,
+                  animationDelay: `${pos * 0.1}s`
+                }}
+              ></div>
+            ))}
+          </div>
         </div>
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
       </div>
 
-      {/* Features Section */}
       <section className="py-20 bg-dark-surface/50 border-y border-gold/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -139,7 +144,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Call to Action Section */}
       <section className="py-20 bg-gradient-to-br from-dark-bg via-mystical/10 to-dark-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gold mb-6">
