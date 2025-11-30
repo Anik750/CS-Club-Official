@@ -79,7 +79,7 @@ export default function Layout({ children }: LayoutProps) {
                   </a>
                 </li>
                 <li>
-                  <a href="#" target="_blank" className="hover:text-gold transition">
+                  <a href="https://www.instagram.com/whitney.cs.club/" target="_blank" className="hover:text-gold transition">
                     Instagram
                   </a>
                 </li>
