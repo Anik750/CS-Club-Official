@@ -17,7 +17,6 @@ export default function Problems() {
   const [showFeedback, setShowFeedback] = useState<Record<number, boolean>>({});
 
   const mcQuestions: MCQuestion[] = [
-    // JavaScript - Easy (1-9)
     {
       id: 1,
       language: "JavaScript",
@@ -99,7 +98,6 @@ export default function Problems() {
       correctAnswer: 1,
       explanation: "Use isNaN() function to check if a value is NaN. You cannot use === because NaN === NaN returns false.",
     },
-    // JavaScript - Medium (10-17)
     {
       id: 10,
       language: "JavaScript",
@@ -212,7 +210,6 @@ export default function Problems() {
       correctAnswer: 1,
       explanation: "Array.map() creates a new array by applying a callback function to each element of the original array. The original array is not modified.",
     },
-    // JavaScript - Hard (18-25)
     {
       id: 18,
       language: "JavaScript",
@@ -321,7 +318,6 @@ export default function Problems() {
       explanation: "The event loop continuously checks if the call stack is empty, and if so, moves callbacks from the callback queue to the call stack for execution.",
     },
 
-    // Java - Easy (26-34)
     {
       id: 26,
       language: "Java",
@@ -418,7 +414,6 @@ export default function Problems() {
       correctAnswer: 1,
       explanation: "'super' is used to call parent class methods or constructors. It's useful when you want to access overridden methods or constructor chaining.",
     },
-    // Java - Medium (35-42)
     {
       id: 35,
       language: "Java",
@@ -526,7 +521,6 @@ export default function Problems() {
       correctAnswer: 1,
       explanation: "Polymorphism allows objects to take multiple forms. In Java, it's achieved through inheritance and interfaces, allowing you to use parent class references for child objects.",
     },
-    // Java - Hard (43-50)
     {
       id: 43,
       language: "Java",
@@ -640,7 +634,6 @@ export default function Problems() {
       explanation: "ArrayList uses dynamic arrays (indexed access is O(1)); LinkedList uses doubly-linked nodes (indexed access is O(n)). Choose based on access patterns.",
     },
 
-    // Python - Easy (51-59)
     {
       id: 51,
       language: "Python",
@@ -742,7 +735,6 @@ export default function Problems() {
       correctAnswer: 1,
       explanation: "A dictionary is an unordered collection of key-value pairs, created with curly braces {}. You access values using their keys.",
     },
-    // Python - Medium (60-67)
     {
       id: 60,
       language: "Python",
@@ -964,7 +956,6 @@ export default function Problems() {
       explanation: "A context manager (used with 'with') ensures proper setup and cleanup. Example: 'with open(file) as f:' automatically closes the file when done.",
     },
 
-    // C++ - Easy (76-84)
     {
       id: 76,
       language: "C++",
@@ -1071,7 +1062,6 @@ export default function Problems() {
       correctAnswer: 3,
       explanation: "Both 'const int x = 5;' and 'int const x = 5;' declare constants. You can also use #define for compile-time constants.",
     },
-    // C++ - Medium (85-92)
     {
       id: 85,
       language: "C++",
@@ -1179,7 +1169,6 @@ export default function Problems() {
       correctAnswer: 1,
       explanation: "'virtual' enables dynamic (runtime) polymorphism. A virtual function can be overridden in derived classes for different implementations.",
     },
-    // C++ - Hard (93-100)
     {
       id: 93,
       language: "C++",
@@ -1377,7 +1366,6 @@ export default function Problems() {
 
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden py-20">
         <div className="absolute inset-0 z-0">
           <img
@@ -1400,15 +1388,28 @@ export default function Problems() {
           </p>
         </div>
       </section>
-      <div className="relative h-16 bg-gradient-to-r from-transparent via-gold to-transparent opacity-40 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-dark-bg via-gold/20 to-dark-bg"></div>
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+      <div className="relative h-24 bg-gradient-to-r from-dark-bg via-dark-surface/30 to-dark-bg overflow-hidden flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="flex items-center gap-16">
+            <svg className="w-4 h-12 opacity-50" viewBox="0 0 20 48" fill="none" stroke="rgba(212, 175, 55, 0.6)" strokeWidth="2">
+              <path d="M 15 0 L 5 24 L 15 48" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <div className="flex items-center gap-2">
+              <div className="w-1 h-1 bg-gold/60 rounded-full"></div>
+              <div className="w-1 h-1 bg-gold/40 rounded-full"></div>
+              <div className="w-24 h-0.5 bg-gradient-to-r from-gold/40 via-gold/60 to-gold/40"></div>
+              <div className="w-1 h-1 bg-gold/40 rounded-full"></div>
+              <div className="w-1 h-1 bg-gold/60 rounded-full"></div>
+            </div>
+            <svg className="w-4 h-12 opacity-50" viewBox="0 0 20 48" fill="none" stroke="rgba(212, 175, 55, 0.6)" strokeWidth="2">
+              <path d="M 5 0 L 15 24 L 5 48" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+          <div className="absolute inset-x-0 top-1 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
+          <div className="absolute inset-x-0 bottom-1 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
         </div>
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
       </div>
 
-      {/* Statistics Section */}
       <section className="py-16 bg-dark-bg border-b border-gold/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -1427,7 +1428,6 @@ export default function Problems() {
         </div>
       </section>
 
-      {/* Questions by Language */}
       {languages.map((language) => (
         <section key={language} className="py-20 bg-dark-bg border-b border-gold/10">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1437,7 +1437,6 @@ export default function Problems() {
                 <h2 className="text-3xl md:text-4xl font-bold text-gold">{language}</h2>
               </div>
 
-              {/* Easy Questions */}
               {getQuestionsByDifficulty(language, "Easy").length > 0 && (
                 <div className="mb-12">
                   <h3 className="text-xl font-bold text-green-400 mb-6 flex items-center gap-2">
@@ -1458,7 +1457,6 @@ export default function Problems() {
         </div>
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
       </div>
-              {/* Medium Questions */}
               {getQuestionsByDifficulty(language, "Medium").length > 0 && (
                 <div className="mb-12">
                   <h3 className="text-xl font-bold text-yellow-400 mb-6 flex items-center gap-2">
@@ -1480,7 +1478,6 @@ export default function Problems() {
         </div>
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
       </div>
-              {/* Hard Questions */}
               {getQuestionsByDifficulty(language, "Hard").length > 0 && (
                 <div className="mb-12">
                   <h3 className="text-xl font-bold text-red-400 mb-6 flex items-center gap-2">

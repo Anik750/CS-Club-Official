@@ -111,9 +111,7 @@ export default function About() {
             alt="Diverse team collaboration"
             className="w-full h-full object-cover"
           />
-          {/* Dark Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/80 to-transparent"></div>
-          {/* Mystical overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-mystical/20 via-transparent to-gold/5"></div>
         </div>
 
@@ -125,12 +123,18 @@ export default function About() {
           </h1>
         </div>
       </section>
-      <div className="relative h-16 bg-gradient-to-r from-transparent via-gold to-transparent opacity-40 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-dark-bg via-gold/20 to-dark-bg"></div>
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+      <div className="relative h-24 bg-gradient-to-r from-dark-bg via-dark-surface/30 to-dark-bg overflow-hidden flex items-center justify-center">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-1">
+            <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
+            <div className="w-4/5 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
+            <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
+            <div className="w-4/5 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
+            <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
+          </div>
+          <div className="absolute top-1 left-1/4 w-1 h-1 bg-gold/50 rounded-full"></div>
+          <div className="absolute bottom-1 right-1/4 w-1 h-1 bg-gold/50 rounded-full"></div>
         </div>
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
       </div>
       <section className="py-16 bg-dark-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -184,12 +188,18 @@ export default function About() {
         </div>
       </section>
       
-      <div className="relative h-16 bg-gradient-to-r from-transparent via-gold to-transparent opacity-40 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-dark-bg via-gold/20 to-dark-bg"></div>
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+      <div className="relative h-24 bg-gradient-to-r from-dark-bg via-dark-surface/30 to-dark-bg overflow-hidden flex items-center justify-center">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-1">
+            <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
+            <div className="w-4/5 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
+            <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
+            <div className="w-4/5 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
+            <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
+          </div>
+          <div className="absolute top-1 left-1/4 w-1 h-1 bg-gold/50 rounded-full"></div>
+          <div className="absolute bottom-1 right-1/4 w-1 h-1 bg-gold/50 rounded-full"></div>
         </div>
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
       </div>
 
       <section className="py-20 bg-dark-surface/50 border-y border-gold/10">
@@ -209,7 +219,6 @@ export default function About() {
                 key={member.id}
                 className="bg-dark-bg border border-gold/20 rounded-xl overflow-hidden hover:border-gold/50 hover:shadow-lg hover:shadow-gold/20 transition-all duration-300 group"
               >
-                {/* Image Placeholder */}
                 <div className="w-full h-64 bg-gradient-to-br from-dark-surface to-mystical/20 flex items-center justify-center border-b border-gold/20 group-hover:from-dark-surface group-hover:to-mystical/30 transition-all">
                   {member.image ? (
                     <img
@@ -237,14 +246,6 @@ export default function About() {
                   <p className="text-gold/60 text-sm leading-relaxed">
                     {member.description}
                   </p>
-
-                  {/* Edit Hint */}
-                  {/* <div className="mt-4 pt-4 border-t border-gold/10">
-                    <p className="text-xs text-gold/40">
-                      Edit this page to add member details like name, bio, and
-                      upload a photo
-                    </p>
-                  </div> */}
                 </div>
               </div>
             ))}
